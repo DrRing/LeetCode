@@ -5,8 +5,8 @@ import config_util.getProperty;
 
 public class depencyOn {
 	public static void depencyOn(String path) {
-		String phone = getProperty.getProperty(path,"phone");
-		String pwd = getProperty.getProperty(path,"password");
+		String phone = getProperty.getProperty("phone");
+		String pwd = getProperty.getProperty("password");
 
 
 

@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class getProperty {
 
-	public static Map<String, String> getProperty(String path) {
+	public static Map<String, String> getProperty1(String path) {
 		Map<String, String> list_questsArrayList = new HashMap<String, String>();
 
 		Properties properties = new Properties();
@@ -39,7 +39,8 @@ public class getProperty {
 		return list_questsArrayList;
 	}
 
-	public static String getProperty(String path, String key_val) {
+	public static String getProperty(String key_val) {
+		String path = "property/depency.properties";
 		Properties properties = new Properties();
 		InputStream inputStream = null;
 		try {
@@ -63,9 +64,8 @@ public class getProperty {
 	}
 
 	public static void main(String[] args) {
-		String pathString = "property/depency.properties";
-		getProperty.getProperty(pathString, "loginname");
-		System.out.print(getProperty.getProperty(pathString));
+		getProperty.getProperty("phone");
+		//System.out.print(getProperty.getProperty("phone"));
 	}
 
 }
