@@ -13,6 +13,7 @@ import java.util.Set;
 
 
 public class getProperty {
+	/*返回整个map*/
 
 	public static Map<String, String> getProperty1(String path) {
 		Map<String, String> list_questsArrayList = new HashMap<String, String>();
@@ -25,20 +26,21 @@ public class getProperty {
 			Set KeyValue = properties.keySet();
 			for (Iterator i = KeyValue.iterator(); i.hasNext();) {
 				String key = (String) i.next();
-				if (key.equals("loginname")) {
-					// System.out.println(properties.get(key));
-					list_questsArrayList.put("loginname", properties.get(key).toString());
-
-				} else if (key.equals("password")) {
-					list_questsArrayList.put("password", properties.get(key).toString());
-				}
+//				if (key.equals("loginname")) {
+//					// System.out.println(properties.get(key));
+//					list_questsArrayList.put("loginname", properties.get(key).toString());
+//
+//				} else if (key.equals("password")) {
+//					list_questsArrayList.put("password", properties.get(key).toString());
+//				}
+				list_questsArrayList.put(key, properties.get(key).toString());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return list_questsArrayList;
 	}
-
+/*返回指定的字段*/
 	public static String getProperty(String key_val) {
 		String path = "property/depency.properties";
 		Properties properties = new Properties();
@@ -65,7 +67,9 @@ public class getProperty {
 
 	public static void main(String[] args) {
 		getProperty.getProperty("phone");
-		//System.out.print(getProperty.getProperty("phone"));
+		String path = "property/depency.properties";
+		System.out.print(getProperty.getProperty1(path));
+
 	}
 
 }

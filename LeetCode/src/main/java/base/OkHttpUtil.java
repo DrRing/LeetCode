@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class OkHttpUtil{
-    private static final Logger logger = LoggerFactory.getLogger(OkHttpUtil.class);
+    //private static final Logger logger = LoggerFactory.getLogger(OkHttpUtil.class);
     
     private static OkHttpClient  okHttpClient;
 
@@ -46,7 +46,7 @@ public class OkHttpUtil{
                 return response.body().string();
             }
         } catch (Exception e) {
-            logger.error("okhttp3 put error >> ex = {}", ExceptionUtils.getStackTrace(e));
+           // logger.error("okhttp3 put error >> ex = {}", ExceptionUtils.getStackTrace(e));
         } finally {
             if (response != null) {
                 response.close();
@@ -83,7 +83,8 @@ public class OkHttpUtil{
                 return response.body().string();
             }
         } catch (Exception e) {
-            logger.error("okhttp3 post error >> ex = {}", ExceptionUtils.getStackTrace(e));
+        	System.out.print(e);
+            //logger.error("okhttp3 post error >> ex = {}", ExceptionUtils.getStackTrace(e));
         } finally {
             if (response != null) {
                 response.close();
@@ -126,7 +127,7 @@ public class OkHttpUtil{
                 return response.body().string();
             }
         } catch (Exception e) {
-            logger.error("okhttp3 put error >> ex = {}", ExceptionUtils.getStackTrace(e));
+            //logger.error("okhttp3 put error >> ex = {}", ExceptionUtils.getStackTrace(e));
         } finally {
             if (response != null) {
                 response.close();
@@ -157,7 +158,7 @@ public class OkHttpUtil{
                 //return okHttpClient.newCall(request).execute().body().string();
             }
         } catch (Exception e) {
-            logger.error("okhttp3 post error >> ex = {}", ExceptionUtils.getStackTrace(e));
+        //    logger.error("okhttp3 post error >> ex = {}", ExceptionUtils.getStackTrace(e));
         } finally {
             if (response != null) {
                 response.close();
@@ -187,7 +188,7 @@ public class OkHttpUtil{
                 return response.body().string();
             }
         } catch (Exception e) {
-            logger.error("okhttp3 post error >> ex = {}", ExceptionUtils.getStackTrace(e));
+       //     logger.error("okhttp3 post error >> ex = {}", ExceptionUtils.getStackTrace(e));
         } finally {
             if (response != null) {
                 response.close();

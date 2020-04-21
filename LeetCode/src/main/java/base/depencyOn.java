@@ -1,6 +1,9 @@
 package base;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import config_util.getProperty;
 
 public class depencyOn {
@@ -11,7 +14,11 @@ public class depencyOn {
 
 
 	}
-
+    private void construct_json(String[] args) {
+		for (String arg : args) {
+			System.out.println(arg);
+		} 
+	}
 	public String getLoginId(String[] args) {
 		return null;
 	}
