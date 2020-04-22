@@ -65,25 +65,34 @@ public class OkHttpUtil{
     public static String post(String url, Map<String, String> params) {
         String responseBody = "";
         FormBody.Builder builder = new FormBody.Builder();
+      
         //添加参数
         if (params != null && params.keySet().size() > 0) {
             for (String key : params.keySet()) {
                 builder.add(key, params.get(key));
+            	System.out.println(key+":"+params.get(key));
+
             }
         }
         Request request = new Request.Builder()
                 .url(url)
-                .post(builder.build())
+                .post(builder.build())          
                 .build();
+    	System.out.println(request);
+
         Response response = null;
         try { 
+        	System.out.println("break1");
+
             response = okHttpClient.newCall(request).execute();
+        	System.out.println("break2");
+
             int status = response.code();
             if (response.isSuccessful()) {
                 return response.body().string();
             }
         } catch (Exception e) {
-        	System.out.print(e);
+        	System.out.println(e);
             //logger.error("okhttp3 post error >> ex = {}", ExceptionUtils.getStackTrace(e));
         } finally {
             if (response != null) {

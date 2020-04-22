@@ -13,8 +13,8 @@ public class run {
 		String path = "property/captcha.properties";
 		String url = getProperty.getProperty("testhost")+getProperty.getProperty("captcha_url");		
 		Map<String, String> params = getProperty.getProperty1(path);
-		System.out.print(params);
-		System.out.print(OkHttpUtil.post(url, params));
+		//System.out.println(params);
+		System.out.println(OkHttpUtil.post(url, params));
 
 		
 	}
