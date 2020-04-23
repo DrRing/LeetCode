@@ -26,7 +26,9 @@ public class depencyOn {
 	public String getSendSms() {
 		return null;
 	}
-
+	public String getSendSms(String phone,String platform,String businessType) {
+		return null;
+	}
 	public void register() {
 	}
 	public static void main(String[] args)  {

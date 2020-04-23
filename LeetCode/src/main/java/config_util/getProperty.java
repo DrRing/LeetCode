@@ -26,13 +26,6 @@ public class getProperty {
 			Set KeyValue = properties.keySet();
 			for (Iterator i = KeyValue.iterator(); i.hasNext();) {
 				String key = (String) i.next();
-//				if (key.equals("loginname")) {
-//					// System.out.println(properties.get(key));
-//					list_questsArrayList.put("loginname", properties.get(key).toString());
-//
-//				} else if (key.equals("password")) {
-//					list_questsArrayList.put("password", properties.get(key).toString());
-//				}
 				list_questsArrayList.put(key, properties.get(key).toString());
 			}
 		} catch (IOException e) {
@@ -54,9 +47,7 @@ public class getProperty {
 				if (key.equals(key_val)) {
 					String valString = properties.get(key).toString();
 					return valString;
-
 				}
-
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

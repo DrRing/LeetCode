@@ -1,4 +1,4 @@
-package config_util;
+package util;
 
 //https://www.pianshen.com/article/4958223920/
 import java.io.File;
@@ -8,6 +8,12 @@ import java.io.InputStreamReader;
 import java.io.FileInputStream;
 
 import java.io.Reader;
+
+
+import base.OkHttpUtil;
+import config_util.getProperty;
+
+
 
 public class getJson {
 	/**
@@ -36,6 +42,14 @@ public class getJson {
 			e.printStackTrace();
 			return null;
 		}
+	}
+	public static void main(String[] args) {
+		String path = "property/getcaptcha.json";
+		String bodyString = getJson(path);
+		String url = getProperty.getProperty("testhost")+getProperty.getProperty("captcha_url");
+		System.out.println(OkHttpUtil.postJson(url, bodyString));
+
+		
 	}
 
 }
