@@ -44,8 +44,9 @@ public class getJson {
 		}
 	}
 	public static void main(String[] args) {
-		String path = "property/getcaptcha.json";
+		String path = "property/test.json";
 		String bodyString = getJson(path);
+		System.out.println(bodyString);
 		String url = getProperty.getProperty("testhost")+getProperty.getProperty("captcha_url");
 		System.out.println(OkHttpUtil.postJson(url, bodyString));
 

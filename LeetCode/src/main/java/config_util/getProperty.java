@@ -56,11 +56,11 @@ public class getProperty {
 
 	}
 
-	public static void main(String[] args) {
-		getProperty.getProperty("phone");
-		String path = "property/depency.properties";
-		System.out.print(getProperty.getProperty1(path));
-
-	}
+//	public static void main(String[] args) {
+//		getProperty.getProperty("phone");
+//		String path = "property/depency.properties";
+//		System.out.print(getProperty.getProperty1(path));
+//
+//	}
 
 }
