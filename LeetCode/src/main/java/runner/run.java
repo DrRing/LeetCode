@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.testng.annotations.Test;
-import org.testng.asserts.*;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -17,7 +15,7 @@ import base.OkHttpUtil;
 import config_util.getProperty;
 import constructor.operateExcel;
 import dto.*;
-@Test
+
 public class run {
 
 	public static void main(String[] args) {
@@ -31,9 +29,9 @@ public class run {
 				String param = JSON.toJSONString(mapQ);
 				String respString2 = OkHttpUtil.postJson(url, param);
 				JSONObject jsonObject = JSONObject.parseObject(respString2); 
-				//String respose_code = jsonObject.get("code"));
-				assertEquals("SUCCESS", jsonObject.get("code"));
-			}
+				System.out.println(respString2);
+				//String respose_code = jsonObject.get("code"));	
+				}
 
 		}
 	}
