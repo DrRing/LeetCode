@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-26T15:57:54 CST" name="Default suite" finished-at="2020-04-26T15:57:55 CST" duration-ms="976">
+  <suite started-at="2020-04-26T17:44:28 CST" name="Default suite" finished-at="2020-04-26T17:44:30 CST" duration-ms="2603">
     <groups>
     </groups>
-    <test started-at="2020-04-26T15:57:54 CST" name="Default test" finished-at="2020-04-26T15:57:55 CST" duration-ms="976">
+    <test started-at="2020-04-26T17:44:28 CST" name="Default test" finished-at="2020-04-26T17:44:30 CST" duration-ms="2603">
       <class name="APItest.test_SendsmsApi">
-        <test-method signature="testSend()[pri:0, instance:APItest.test_SendsmsApi@63376bed]" started-at="2020-04-26T15:57:54 CST" name="testSend" finished-at="2020-04-26T15:57:55 CST" duration-ms="945" status="FAIL">
+        <test-method signature="testSend()[pri:0, instance:APItest.test_SendsmsApi@738dc9b]" started-at="2020-04-26T17:44:28 CST" name="testSend" finished-at="2020-04-26T17:44:30 CST" duration-ms="2570" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [success] but found [SUCCESS]]]>
+              <![CDATA[expected [SUCCESS] but found [SYSTEM_ERROR]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [success] but found [SUCCESS]
+              <![CDATA[java.lang.AssertionError: expected [SUCCESS] but found [SYSTEM_ERROR]
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:575)
 at org.testng.Assert.assertEquals(Assert.java:585)
-at APItest.test_SendsmsApi.testSend(test_SendsmsApi.java:43)
+at APItest.test_SendsmsApi.testSend(test_SendsmsApi.java:46)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
