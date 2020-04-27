@@ -36,7 +36,6 @@ public class AssertListener extends TestListenerAdapter {
 
 
     private  int index=0;
-
     private void handleAssertion(ITestResult tr){
         if(!Assertion.flag){
             Throwable throwable = tr.getThrowable();
@@ -57,8 +56,6 @@ public class AssertListener extends TestListenerAdapter {
                 traces = this.getKeyStackTrace(tr, traces);
                 alltrace = this.merge(alltrace, traces);
             }
-
-
             throwable.setStackTrace(alltrace);
             tr.setThrowable(throwable);
             Assertion.flag = true;

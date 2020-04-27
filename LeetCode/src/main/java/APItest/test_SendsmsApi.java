@@ -6,22 +6,23 @@ import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
+import Assertion.AssertListener;
 import base.OkHttpUtil;
 import config_util.getProperty;
 import constructor.operateExcel;
 
+@Listeners(AssertListener.class)
 public class test_SendsmsApi {
-
 	public void before() {
 		System.out.println("测试开始");
 	}
-
 	@Test
 	public void testSend() {
 		String sheetname = "Case_sendsms";
@@ -41,17 +42,17 @@ public class test_SendsmsApi {
 				JSONObject jsonObject = JSONObject.parseObject(resopseString);
 				String codeString = jsonObject.getString("code");
 				String expected = ob.get("expected").toString();
-//				System.out.println(codeString);
-//				System.out.println(expected);
-				assertEquals(codeString, expected);
+				Assertion.Assertion.verifyEquals(codeString, expected,"预期是:"+"codeString"+"实际是："+expected);
+				System.out.println(expected+":"+codeString);
 //				SoftAssert assertion = new SoftAssert();
+//				System.out.println(expected+":"+codeString);
 //				assertion.assertEquals(codeString, expected);
+//				assertion.assertAll();
 			}else {
 				System.out.println("body为空");
 			}
 		}
 	}
-
 	public void after() {
 		System.out.println("测试结束");
 
