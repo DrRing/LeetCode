@@ -4,6 +4,10 @@ package base;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.testng.annotations.Test;
+
+import com.alibaba.fastjson.JSONObject;
+
 import config_util.getProperty;
 
 public class depencyOn {
@@ -14,25 +18,28 @@ public class depencyOn {
 
 
 	}
+	@Test
     private void construct_json(String[] args) {
 		for (String arg : args) {
 			System.out.println(arg);
 		} 
 	}
+	@Test
 	public String getLoginId(String[] args) {
 		return null;
 	}
 
-	public String getSendSms() {
-		return null;
+	public static String getSendSms(String json) {
+		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
+		String responseString = OkHttpUtil.postJson(url, json);
+		JSONObject jsonObject = JSONObject.parseObject(responseString); 
+		String dataObject = jsonObject.getString("data");	
+		JSONObject data = JSONObject.parseObject(dataObject); 
+		String captchaCode = data.getString("captchaCode");
+		return captchaCode;
 	}
-	public String getSendSms(String phone,String platform,String businessType) {
-		return null;
-	}
+	@Test
 	public void register() {
 	}
-	public static void main(String[] args)  {
-		String pathString = "property/depency.properties";
-		depencyOn.depencyOn(pathString);
-	}
+
 }

@@ -1,6 +1,6 @@
-{
-	"platform": "APP",
-	"businessType": "REGISTER",
-	"receiver": "15036770523",
-	"cnum": "86"
+{ 
+ "platform" : "WEB", 
+"businessType" : "Login",  
+"phone" : "15036770523", 
+ "cnum" : "86"
 }

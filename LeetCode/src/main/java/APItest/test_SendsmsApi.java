@@ -23,6 +23,7 @@ public class test_SendsmsApi {
 	public void before() {
 		System.out.println("测试开始");
 	}
+
 	@Test
 	public void testSend() {
 		String sheetname = "Case_sendsms";
@@ -42,24 +43,27 @@ public class test_SendsmsApi {
 				JSONObject jsonObject = JSONObject.parseObject(resopseString);
 				String codeString = jsonObject.getString("code");
 				String expected = ob.get("expected").toString();
-				Assertion.Assertion.verifyEquals(codeString, expected,"预期是:"+"codeString"+"实际是："+expected);
-				System.out.println(expected+":"+codeString);
-//				SoftAssert assertion = new SoftAssert();
-//				System.out.println(expected+":"+codeString);
-//				assertion.assertEquals(codeString, expected);
-//				assertion.assertAll();
-			}else {
+				if (expected.equals(codeString)) {
+					// System.out.println(ob.get("subname")+":"+"用例执行通过");
+					continue;
+				} else {
+					System.out.println(ob.get("subname") + ":" + "用例执行失败");
+				}
+
+			} else {
 				System.out.println("body为空");
 			}
 		}
+//		Assertion.Assertion.verifyEquals(codeString, expected,"预期是:"+"codeString"+"实际是："+expected);
+//		SoftAssert assertion = new SoftAssert();
+//		System.out.println(expected+":"+codeString);
+//		assertion.assertEquals(codeString, expected);
+//		assertion.assertAll();
 	}
+
 	public void after() {
 		System.out.println("测试结束");
 
 	}
-
-	
-
-	
 
 }

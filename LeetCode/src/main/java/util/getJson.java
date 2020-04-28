@@ -9,8 +9,10 @@ import java.io.FileInputStream;
 
 import java.io.Reader;
 
+import com.alibaba.fastjson.JSONObject;
 
 import base.OkHttpUtil;
+import base.depencyOn;
 import config_util.getProperty;
 
 
@@ -46,11 +48,16 @@ public class getJson {
 	public static void main(String[] args) {
 		String path = "property/test.json";
 		String bodyString = getJson(path);
-		System.out.println(bodyString);
-		String url = getProperty.getProperty("testhost")+getProperty.getProperty("captcha_url");
-		System.out.println(OkHttpUtil.postJson(url, bodyString));
+//		System.out.println(bodyString);
+//		String url = getProperty.getProperty("testhost")+getProperty.getProperty("captcha_url");
+//		System.out.println(OkHttpUtil.postJson(url, bodyString));
+//		String responseString = OkHttpUtil.postJson(url, bodyString);
+//		JSONObject jsonObject = JSONObject.parseObject(responseString); 
+//		String dataObject = jsonObject.getString("data");	
+//		JSONObject data = JSONObject.parseObject(dataObject); 
+		String captchaCode = depencyOn.getSendSms(bodyString);
+		System.out.println(captchaCode);
 
-		
 	}
 
 }
