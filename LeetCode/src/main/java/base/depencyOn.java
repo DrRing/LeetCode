@@ -1,6 +1,5 @@
 package base;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,15 +14,15 @@ public class depencyOn {
 		String phone = getProperty.getProperty("phone");
 		String pwd = getProperty.getProperty("password");
 
-
-
 	}
+
 	@Test
-    private void construct_json(String[] args) {
+	private void construct_json(String[] args) {
 		for (String arg : args) {
 			System.out.println(arg);
-		} 
+		}
 	}
+
 	@Test
 	public String getLoginId(String[] args) {
 		return null;
@@ -32,12 +31,22 @@ public class depencyOn {
 	public static String getSendSms(String json) {
 		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
 		String responseString = OkHttpUtil.postJson(url, json);
-		JSONObject jsonObject = JSONObject.parseObject(responseString); 
-		String dataObject = jsonObject.getString("data");	
-		JSONObject data = JSONObject.parseObject(dataObject); 
-		String captchaCode = data.getString("captchaCode");
-		return captchaCode;
+		JSONObject jsonObject = JSONObject.parseObject(responseString);
+		String dataObject = jsonObject.getString("data");
+		JSONObject data = JSONObject.parseObject(dataObject);
+
+		try {
+			String captchaCode = data.getString("captchaCode");
+			return captchaCode;
+		} catch (Exception e) {
+			System.out.print(e);
+			System.out.println(data);
+
+			return null;
+		}
+
 	}
+
 	@Test
 	public void register() {
 	}
