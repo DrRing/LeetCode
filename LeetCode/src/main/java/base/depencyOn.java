@@ -10,11 +10,6 @@ import com.alibaba.fastjson.JSONObject;
 import config_util.getProperty;
 
 public class depencyOn {
-	public static void depencyOn(String path) {
-		String phone = getProperty.getProperty("phone");
-		String pwd = getProperty.getProperty("password");
-
-	}
 
 	@Test
 	private void construct_json(String[] args) {
@@ -24,8 +19,35 @@ public class depencyOn {
 	}
 
 	@Test
-	public String getLoginId(String[] args) {
-		return null;
+	public String getLoginId(String json) {
+		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login");
+		String responseString = OkHttpUtil.postJson(url, json);
+		JSONObject jsonObject = JSONObject.parseObject(responseString);
+		String dataObject = jsonObject.getString("data");
+		JSONObject data = JSONObject.parseObject(dataObject);
+		try {
+			String captchaCode = data.getString("loginId");
+			return captchaCode;
+		} catch (Exception e) {
+			System.out.print(e);
+			return null;
+		}
+	}
+
+	public static void doLogin(String json) {
+		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login");
+		String responseString = OkHttpUtil.postJson(url, json);
+		JSONObject jsonObject = JSONObject.parseObject(responseString);
+		String dataObject = jsonObject.getString("data");
+		JSONObject data = JSONObject.parseObject(dataObject);
+		try {
+			String captchaCode = data.getString("code");
+			if (captchaCode.equals("SUCCESS")==false) {
+				System.out.print("好像登录没有成功");
+			}
+		} catch (Exception e) {
+			System.out.print(e);
+		}
 	}
 
 	public static String getSendSms(String json) {
@@ -40,11 +62,8 @@ public class depencyOn {
 			return captchaCode;
 		} catch (Exception e) {
 			System.out.print(e);
-			System.out.println(data);
-
 			return null;
 		}
-
 	}
 
 	@Test

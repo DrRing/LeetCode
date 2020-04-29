@@ -54,7 +54,6 @@ public class test_LoginApi {
 					String codeString = jsonObject.getString("code");
 					String expected = ob.get("expected").toString();
 					// System.out.println(codeString+":"+expected);
-
 					if (expected.equals(codeString)) {
 						System.out.println(ob.get("subname") + ":" + "用例执行通过");
 						continue;
