@@ -15,8 +15,6 @@ import base.OkHttpUtil;
 import base.depencyOn;
 import config_util.getProperty;
 
-
-
 public class getJson {
 	/**
 	 * 读取json文件，返回json串
@@ -45,6 +43,7 @@ public class getJson {
 			return null;
 		}
 	}
+
 	public static void main(String[] args) {
 		String path = "property/test.json";
 		String bodyString = getJson(path);

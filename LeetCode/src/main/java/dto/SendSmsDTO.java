@@ -12,18 +12,23 @@ public class SendSmsDTO {
 	public String getPlatform() {
 		return platform;
 	}
+
 	public void setPlatform(String platform) {
 		this.platform = platform;
 	}
+
 	public String getReceive() {
 		return receive;
 	}
+
 	public String getCnum() {
 		return cnum;
 	}
+
 	public void setCnum(String cnum) {
 		this.cnum = cnum;
 	}
+
 	public void setBusinessType(String businessType) {
 		this.businessType = businessType;
 	}

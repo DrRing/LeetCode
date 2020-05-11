@@ -43,14 +43,14 @@ public class test_LoginApi {
 				System.out.println(captchaCode);
 				if (ob.get("body") != null && ob.get("expected") != null) {
 					Map<String, String> body = JSONObject.parseObject(ob.get("body").toString(), Map.class);
-					//插入验证码
+					// 插入验证码
 					body.put("captcha", captchaCode);
-					//将对象转化为Json字符串
-					String param = JSON.toJSONString(body);				
+					// 将对象转化为Json字符串
+					String param = JSON.toJSONString(body);
 					String resopseString = OkHttpUtil.postJson(url, param);
 					System.out.println(resopseString);
 					JSONObject jsonObject = JSONObject.parseObject(resopseString);
-					
+
 					String codeString = jsonObject.getString("code");
 					String expected = ob.get("expected").toString();
 					// System.out.println(codeString+":"+expected);

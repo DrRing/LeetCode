@@ -21,31 +21,36 @@ public class RegisterDTO {
 	private String myidkey;
 	private String idNo;
 	private String registerExtend;
-	private String  sourceExtend ;
-	public enum businessType{
-		THIRD_QQ,THIRD_SINA,THIRD_WECHAT,PHONE_CODE
+	private String sourceExtend;
+
+	public enum businessType {
+		THIRD_QQ, THIRD_SINA, THIRD_WECHAT, PHONE_CODE
 	}
 
-	
-	
 	public String getPlatform() {
 		return platform;
 	}
+
 	public void setPlatform(String platform) {
 		this.platform = platform;
 	}
+
 	public String getPhone() {
 		return phone;
 	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	public String getCnum() {
 		return cnum;
 	}
+
 	public void setCnum(String cnum) {
 		this.cnum = cnum;
 	}
+
 	public String getPassword() {
 		return password;
 	}

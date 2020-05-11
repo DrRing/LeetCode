@@ -32,10 +32,8 @@ public class test_SendsmsApi {
 		// List<Map<String, Object>> cases_list= operateExcel.excel_re_map(pathString,
 		// sheetname);
 		List<Map<String, Object>> cases_list = operateExcel.excel_re_map2(pathString);
-
 		for (int i = 0; i < cases_list.size(); i++) {
 			Map<String, Object> ob = cases_list.get(i);
-
 			if (ob.get("body") != null && ob.get("expected") != null) {
 				Map<String, String> mapQ = JSONObject.parseObject(ob.get("body").toString(), Map.class);
 				String param = JSON.toJSONString(mapQ);
@@ -49,7 +47,6 @@ public class test_SendsmsApi {
 				} else {
 					System.out.println(ob.get("subname") + ":" + "用例执行失败");
 				}
-
 			} else {
 				System.out.println("body为空");
 			}

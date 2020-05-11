@@ -42,7 +42,7 @@ public class depencyOn {
 		JSONObject data = JSONObject.parseObject(dataObject);
 		try {
 			String captchaCode = data.getString("code");
-			if (captchaCode.equals("SUCCESS")==false) {
+			if (captchaCode.equals("SUCCESS") == false) {
 				System.out.print("好像登录没有成功");
 			}
 		} catch (Exception e) {

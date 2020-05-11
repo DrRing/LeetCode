@@ -1,6 +1,5 @@
 package runner;
 
-
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
@@ -30,11 +29,11 @@ public class run {
 				Map<String, String> mapQ = JSONObject.parseObject(ob.get("body").toString(), Map.class);
 				String param = JSON.toJSONString(mapQ);
 				String respString2 = OkHttpUtil.postJson(url, param);
-				JSONObject jsonObject = JSONObject.parseObject(respString2); 
-				String respose_code = jsonObject.getString("code");	
+				JSONObject jsonObject = JSONObject.parseObject(respString2);
+				String respose_code = jsonObject.getString("code");
 				System.out.println(respose_code);
 
-				}
+			}
 
 		}
 	}

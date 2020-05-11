@@ -11,9 +11,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-
 public class getProperty {
-	/*返回整个map*/
+	/* 返回整个map */
 
 	public static Map<String, String> getProperty1(String path) {
 		Map<String, String> list_questsArrayList = new HashMap<String, String>();
@@ -33,7 +32,8 @@ public class getProperty {
 		}
 		return list_questsArrayList;
 	}
-/*返回指定的字段*/
+
+	/* 返回指定的字段 */
 	public static String getProperty(String key_val) {
 		String path = "property/depency.properties";
 		Properties properties = new Properties();

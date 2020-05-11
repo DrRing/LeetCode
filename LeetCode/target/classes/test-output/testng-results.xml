@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-11T13:16:36 CST" name="Default suite" finished-at="2020-05-11T13:16:37 CST" duration-ms="1613">
+    <groups>
+    </groups>
+    <test started-at="2020-05-11T13:16:36 CST" name="Default test" finished-at="2020-05-11T13:16:37 CST" duration-ms="1613">
+      <class name="APItest.test_CheckSmsApi">
+        <test-method signature="testSendSms()[pri:0, instance:APItest.test_CheckSmsApi@7526515b]" started-at="2020-05-11T13:16:36 CST" name="testSendSms" finished-at="2020-05-11T13:16:37 CST" duration-ms="1579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSendSms -->
+      </class> <!-- APItest.test_CheckSmsApi -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

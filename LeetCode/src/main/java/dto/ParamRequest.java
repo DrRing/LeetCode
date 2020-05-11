@@ -1,21 +1,19 @@
 package dto;
 
-
-
 import java.io.Serializable;
 
 import dto.GetcaptchaDTO;
 import dto.LoginDTO;
 
-public class ParamRequest implements Serializable{
-	
+public class ParamRequest implements Serializable {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
 	private GetcaptchaDTO getcaptcha;
-	
+
 	private LoginDTO login;
 
 	public GetcaptchaDTO getGetcaptcha() {
@@ -33,7 +31,5 @@ public class ParamRequest implements Serializable{
 	public void setLogin(LoginDTO login) {
 		this.login = login;
 	}
-	
-	
 
 }
