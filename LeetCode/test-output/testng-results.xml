@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="24" passed="23" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-11T14:56:40 CST" name="Default suite" finished-at="2020-05-11T14:56:41 CST" duration-ms="1484">
+  <suite started-at="2020-05-12T15:17:19 CST" name="我自己的接口测试套件" finished-at="2020-05-12T15:17:21 CST" duration-ms="2759">
     <groups>
     </groups>
-    <test started-at="2020-05-11T14:56:40 CST" name="Default test" finished-at="2020-05-11T14:56:41 CST" duration-ms="1484">
+    <test started-at="2020-05-12T15:17:19 CST" name="这些是测试模块" finished-at="2020-05-12T15:17:21 CST" duration-ms="2759">
       <class name="APItest.test_DemoApi">
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="319" status="PASS">
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:19 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:20 CST" duration-ms="361" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,8 +22,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="23" status="FAIL">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:20 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:20 CST" duration-ms="331" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -47,7 +47,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:575)
 at org.testng.Assert.assertEquals(Assert.java:585)
-at APItest.test_DemoApi.testSend1(test_DemoApi.java:42)
+at APItest.test_DemoApi.testSend(test_DemoApi.java:42)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,8 +81,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="21" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:20 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="918" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,8 +97,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="17" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="31" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -113,8 +113,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="18" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="22" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -129,8 +129,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="20" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="18" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -145,8 +145,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="18" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -161,8 +161,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="19" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -177,8 +177,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="16" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="27" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -193,8 +193,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="20" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="18" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -209,8 +209,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="27" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -225,8 +225,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="17" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -241,8 +241,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="15" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -257,8 +257,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="19" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -273,8 +273,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="19" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="18" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -289,8 +289,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="19" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -305,8 +305,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="16" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -321,8 +321,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="15" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -337,8 +337,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="14" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="13" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -353,8 +353,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="14" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -369,8 +369,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="22" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -385,8 +385,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="19" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -401,8 +401,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="23" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -417,8 +417,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
-        <test-method signature="testSend1(java.util.Map)[pri:0, instance:APItest.test_DemoApi@11392934]" started-at="2020-05-11T14:56:41 CST" name="testSend1" data-provider="SendSmsProvider" finished-at="2020-05-11T14:56:41 CST" duration-ms="17" status="PASS">
+        </test-method> <!-- testSend -->
+        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -433,8 +433,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend1 -->
+        </test-method> <!-- testSend -->
       </class> <!-- APItest.test_DemoApi -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- 这些是测试模块 -->
+  </suite> <!-- 我自己的接口测试套件 -->
 </testng-results>

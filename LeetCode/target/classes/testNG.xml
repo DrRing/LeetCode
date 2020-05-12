@@ -1,30 +1,21 @@
-<test name="CIF_API_TEST">
-　　<!-- 参数定义的方法 -->
-　　<parameter name="first-name" value="Cedric"/>
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="我自己的接口测试套件">
 
-　　<!-- groups的用法，前提是需要存在classes的组，否则所有方法不被运行 -->
-　　<groups>
-　　<!-- 定义组中组的方法 -->
-　　　　<define name="groups_name">
-　　　　　　<include name="group1"/>
-　　　　　　<include name="group2"/>
-　　　　</define>
+	<test name="这些是测试模块">
+		<classes>
 
-　　　　<run>
-　　　　　　<!-- 此处用组名来区别 -->
-　　　　　　<inclue name="groups_name" />
-　　　　　　<exclue name="groups_name" />
-　　　　　　</run>
-　　</groups>
+			<class name="APItest.test_DemoApi">
+				<methods>
+					<include name="testSend" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<listeners>
+		<!--<listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/> -->
+		<!--<listener class-name="com.comein.extent.ExtentTestNGIReporterListenerOld" 
+			/> -->
+		<listener class-name="util.ExtentTestNGIReporterListener" />
+	</listeners>
 
-　　<!-- classes的用法，classes中包含类名，类名底下可以包含方法名或排除方法名 -->
-　　<classes>
-　　　　<class name="class1">
-　　　　　　<methods>
-　　　　　　　　<!-- 此处用方法名来区别 -->
-　　　　　　　　<inclue name="test_DemoApi" />
-　　　　　　　　<exclue name="method_name" />
-　　　　　　</methods>
-　　　　</class>
-　　</classes>
-</test>
+</suite>

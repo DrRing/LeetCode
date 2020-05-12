@@ -30,7 +30,7 @@ public class test_DemoApi {
 	}
 
 	@Test(dataProvider = "SendSmsProvider")
-	public void testSend1(Map<String, Object> casedemo) {
+	public void testSend(Map<String, Object> casedemo) {
 		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
 		if (casedemo.get("body") != null && casedemo.get("expected") != null) {
 			Map<String, String> mapQ = JSONObject.parseObject(casedemo.get("body").toString(), Map.class);
