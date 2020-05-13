@@ -9,156 +9,30 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">我自己的接口测试套件</th></tr>
-<tr><td><a href="#t0">这些是测试模块</a></td><td class="num">23</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,759</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1,188</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">我自己的接口测试套件</th></tr></tbody><tbody id="t0"><tr><th colspan="4">这些是测试模块 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">APItest.test_DemoApi</td><td><a href="#m0">testSend</a></td><td rowspan="1">1589267840326</td><td rowspan="1">331</td></tr><tr><th colspan="4">这些是测试模块 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="23">APItest.test_DemoApi</td><td><a href="#m1">testSend</a></td><td rowspan="23">1589267841903</td><td rowspan="23">15</td></tr><tr class="passedeven"><td><a href="#m2">testSend</a></td></tr><tr class="passedeven"><td><a href="#m3">testSend</a></td></tr><tr class="passedeven"><td><a href="#m4">testSend</a></td></tr><tr class="passedeven"><td><a href="#m5">testSend</a></td></tr><tr class="passedeven"><td><a href="#m6">testSend</a></td></tr><tr class="passedeven"><td><a href="#m7">testSend</a></td></tr><tr class="passedeven"><td><a href="#m8">testSend</a></td></tr><tr class="passedeven"><td><a href="#m9">testSend</a></td></tr><tr class="passedeven"><td><a href="#m10">testSend</a></td></tr><tr class="passedeven"><td><a href="#m11">testSend</a></td></tr><tr class="passedeven"><td><a href="#m12">testSend</a></td></tr><tr class="passedeven"><td><a href="#m13">testSend</a></td></tr><tr class="passedeven"><td><a href="#m14">testSend</a></td></tr><tr class="passedeven"><td><a href="#m15">testSend</a></td></tr><tr class="passedeven"><td><a href="#m16">testSend</a></td></tr><tr class="passedeven"><td><a href="#m17">testSend</a></td></tr><tr class="passedeven"><td><a href="#m18">testSend</a></td></tr><tr class="passedeven"><td><a href="#m19">testSend</a></td></tr><tr class="passedeven"><td><a href="#m20">testSend</a></td></tr><tr class="passedeven"><td><a href="#m21">testSend</a></td></tr><tr class="passedeven"><td><a href="#m22">testSend</a></td></tr><tr class="passedeven"><td><a href="#m23">testSend</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">我自己的接口测试套件</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">APItest.test_DemoApi</td><td><a href="#m0">testLogin</a></td><td rowspan="2">1589360208820</td><td rowspan="2">365</td></tr><tr class="passedeven"><td><a href="#m1">testLogin</a></td></tr></tbody>
 </table>
-<h2>这些是测试模块</h2><h3 id="m0">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=app-登录类型验证码, expected=ERROR, description=null, Method=post, body={
- &quot;platform&quot; : &quot;APP&quot;,
-&quot;businessType&quot; : &quot;LOGIN&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=LOGIN}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [ERROR] but found [SUCCESS]
-	at APItest.test_DemoApi.testSend(test_DemoApi.java:42)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1378)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=receiver纯数字校验, expected=SYSTEM_ERROR, description=null, Method=post, body={
+<h2>Default test</h2><h3 id="m0">APItest.test_DemoApi#testLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{subname=PHONE_PWD , expected=CNUM_PHONE_NOT_EXIST, description=null, ID=1.0, businessType=null, body={ 
  &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;OTHER&quot;,  
-&quot;receiver&quot; : &quot;1503asd523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=WEB-注册类型验证码, expected=SUCCESS, description=null, Method=post, body={
+&quot;phone&quot; : &quot;13813813823&quot;, 
+ &quot;cnum&quot; : &quot;86&quot;, 
+&quot;password&quot;:&quot;123456111&quot;,
+&quot;timeout&quot; : &quot;&quot;, 
+&quot;businessType&quot; : &quot;PHONE_PWD&quot; 
+}, depency=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">APItest.test_DemoApi#testLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{subname=手机号验证码登录成功, expected=SUCCESS, description=null, ID=5.0, businessType=PHONE_CODE, body={
  &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;REGISTER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=REGISTER}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=app-其他类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;APP&quot;,
-&quot;businessType&quot; : &quot;OTHER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=OTHER}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=businessType规则之外, expected=SYSTEM_ERROR, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;test&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=cnum不存在, expected=SYSTEM_ERROR, description=null, Method=null, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;REGISTER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;111&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=app-修改密码类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;APP&quot;,
-&quot;businessType&quot; : &quot;CHANGE_PASSWORD&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PASSWORD}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=WEB-登录类型验证码, expected=SUCCESS, description=null, Method=post, body={
+&quot;phone&quot; : &quot;15036770523&quot;, 
+ &quot;cnum&quot; : &quot;&quot;, 
+&quot;captcha&quot; : &quot;3939&quot;, 
+&quot;captchaType&quot; : &quot;LOGIN&quot;,
+&quot;businessType&quot; : &quot;PHONE_CODE&quot; 
+}, depency={
  &quot;platform&quot; : &quot;WEB&quot;,
 &quot;businessType&quot; : &quot;LOGIN&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=LOGIN}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=WEB-修改邮箱类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;CHANGE_EMAIL&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_EMAIL}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=WEB-其他类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;OTHER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=OTHER}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=cnum不匹配, expected=SUCCESS, description=null, Method=null, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;REGISTER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;33&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=app-注册类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;APP&quot;,
-&quot;businessType&quot; : &quot;REGISTER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=REGISTER}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=app-修改邮箱类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;APP&quot;,
-&quot;businessType&quot; : &quot;CHANGE_EMAIL&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_EMAIL}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=平台类型为WEB/app之外, expected=SYSTEM_ERROR, description=null, Method=post, body={
- &quot;platform&quot; : &quot;aaa&quot;,
-&quot;businessType&quot; : &quot;OTHER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=WEB-修改手机号类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;CHANGE_PHONE&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PHONE}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=WEB-支付类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;PAY&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=PAY}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=cnum为空, expected=SUCCESS, description=null, Method=null, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;REGISTER&quot;,  
 &quot;receiver&quot; : &quot;15036770523&quot;,
  &quot;cnum&quot;: &quot;&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=businessType为空, expected=SYSTEM_ERROR, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=WEB-修改密码类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;CHANGE_PASSWORD&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PASSWORD}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=receiver手机号校验, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;OTHER&quot;,  
-&quot;receiver&quot; : &quot;1503677&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m20">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=app-修改手机号类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;APP&quot;,
-&quot;businessType&quot; : &quot;CHANGE_PHONE&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PHONE}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m21">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=receiver为空, expected=SYSTEM_ERROR, description=null, Method=post, body={
- &quot;platform&quot; : &quot;WEB&quot;,
-&quot;businessType&quot; : &quot;OTHER&quot;,  
-&quot;receiver&quot; : &quot;&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m22">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=app-支付类型验证码, expected=SUCCESS, description=null, Method=post, body={
- &quot;platform&quot; : &quot;APP&quot;,
-&quot;businessType&quot; : &quot;PAY&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=PAY}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m23">APItest.test_DemoApi#testSend</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{host_port=null, level=null, subname=平台类型为空, expected=SYSTEM_ERROR, description=null, Method=post, body={
- &quot;platform&quot; : &quot;&quot;,
-&quot;businessType&quot; : &quot;OTHER&quot;,  
-&quot;receiver&quot; : &quot;15036770523&quot;,
- &quot;cnum&quot;: &quot;86&quot;
-}, depency=null, url=null, header=null, ID=null, businessType=null}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+}}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -20,10 +20,8 @@ public class operateExcel {
 		Row row2 = null;
 		ArrayList<Map<String, Object>> list_questsArrayList = new ArrayList<Map<String, Object>>();
 		File xlsFile = new File(url);
-
 		try {
 			InputStream stream = new FileInputStream(xlsFile);
-
 			book = new XSSFWorkbook(stream);
 			sheet = book.getSheet(sheetname);
 			String title[] = null;
@@ -96,16 +94,8 @@ public class operateExcel {
 		return list_questsArrayList;
 	}
 
-	public static void main(String[] args) {
-
-//		String sheetname = "Case_sendsms";
-//		String pathString = "C:\\Users\\Administrator\\Desktop\\0312.xlsx";
-//		//List<Map<String, Object>> cases_list = operateExcel.excel_re_map2(pathString);
-//		List<Map<String, Object>> cases_list = operateExcel.excel_re_map(pathString,sheetname);
-//		List<Map<String, Object>> cases_list2 = operateExcel.excel_re_map2(pathString);
+//	public static void main(String[] args) {
 //
-//		System.out.println(cases_list.size());	
-//		System.out.println(cases_list2.size());		
-
-	}
+//
+//	}
 }

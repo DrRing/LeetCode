@@ -1,440 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="24" passed="23" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-12T15:17:19 CST" name="我自己的接口测试套件" finished-at="2020-05-12T15:17:21 CST" duration-ms="2759">
+  <suite started-at="2020-05-13T16:56:48 CST" name="我自己的接口测试套件" finished-at="2020-05-13T16:56:49 CST" duration-ms="1188">
     <groups>
     </groups>
-    <test started-at="2020-05-12T15:17:19 CST" name="这些是测试模块" finished-at="2020-05-12T15:17:21 CST" duration-ms="2759">
+    <test started-at="2020-05-13T16:56:48 CST" name="Default test" finished-at="2020-05-13T16:56:49 CST" duration-ms="1188">
       <class name="APItest.test_DemoApi">
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:19 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:20 CST" duration-ms="361" status="PASS">
+        <test-method signature="testLogin(java.util.Map)[pri:0, instance:APItest.test_DemoApi@2eae8e6e]" started-at="2020-05-13T16:56:48 CST" name="testLogin" data-provider="LoginProvider" finished-at="2020-05-13T16:56:49 CST" duration-ms="365" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{host_port=null, level=null, subname=app-注册类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "APP",
-"businessType" : "REGISTER",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=REGISTER}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:20 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:20 CST" duration-ms="331" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=app-登录类型验证码, expected=ERROR, description=null, Method=post, body={
- "platform" : "APP",
-"businessType" : "LOGIN",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=LOGIN}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [ERROR] but found [SUCCESS]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [ERROR] but found [SUCCESS]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at APItest.test_DemoApi.testSend(test_DemoApi.java:42)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1378)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:20 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="918" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=app-修改密码类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "APP",
-"businessType" : "CHANGE_PASSWORD",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PASSWORD}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="31" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=app-修改手机号类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "APP",
-"businessType" : "CHANGE_PHONE",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PHONE}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="22" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=app-修改邮箱类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "APP",
-"businessType" : "CHANGE_EMAIL",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_EMAIL}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="18" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=app-支付类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "APP",
-"businessType" : "PAY",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=PAY}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=app-其他类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "APP",
-"businessType" : "OTHER",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=OTHER}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=WEB-注册类型验证码, expected=SUCCESS, description=null, Method=post, body={
+                <![CDATA[{subname=PHONE_PWD , expected=CNUM_PHONE_NOT_EXIST, description=null, ID=1.0, businessType=null, body={ 
  "platform" : "WEB",
-"businessType" : "REGISTER",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=REGISTER}]]>
+"phone" : "13813813823", 
+ "cnum" : "86", 
+"password":"123456111",
+"timeout" : "", 
+"businessType" : "PHONE_PWD" 
+}, depency=null}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="27" status="PASS">
+        </test-method> <!-- testLogin -->
+        <test-method signature="testLogin(java.util.Map)[pri:0, instance:APItest.test_DemoApi@2eae8e6e]" started-at="2020-05-13T16:56:49 CST" name="testLogin" data-provider="LoginProvider" finished-at="2020-05-13T16:56:49 CST" duration-ms="77" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{host_port=null, level=null, subname=WEB-登录类型验证码, expected=SUCCESS, description=null, Method=post, body={
+                <![CDATA[{subname=手机号验证码登录成功, expected=SUCCESS, description=null, ID=5.0, businessType=PHONE_CODE, body={
+ "platform" : "WEB",
+"phone" : "15036770523", 
+ "cnum" : "", 
+"captcha" : "3939", 
+"captchaType" : "LOGIN",
+"businessType" : "PHONE_CODE" 
+}, depency={
  "platform" : "WEB",
 "businessType" : "LOGIN",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=LOGIN}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="18" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=WEB-修改密码类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "CHANGE_PASSWORD",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PASSWORD}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="19" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=WEB-修改手机号类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "CHANGE_PHONE",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_PHONE}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=WEB-修改邮箱类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "CHANGE_EMAIL",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=CHANGE_EMAIL}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=WEB-支付类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "PAY",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=PAY}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=WEB-其他类型验证码, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "OTHER",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=OTHER}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="18" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=平台类型为空, expected=SYSTEM_ERROR, description=null, Method=post, body={
- "platform" : "",
-"businessType" : "OTHER",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=平台类型为WEB/app之外, expected=SYSTEM_ERROR, description=null, Method=post, body={
- "platform" : "aaa",
-"businessType" : "OTHER",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=businessType为空, expected=SYSTEM_ERROR, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=businessType规则之外, expected=SYSTEM_ERROR, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "test",  
-"receiver" : "15036770523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=receiver为空, expected=SYSTEM_ERROR, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "OTHER",  
-"receiver" : "",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=receiver纯数字校验, expected=SYSTEM_ERROR, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "OTHER",  
-"receiver" : "1503asd523",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=receiver手机号校验, expected=SUCCESS, description=null, Method=post, body={
- "platform" : "WEB",
-"businessType" : "OTHER",  
-"receiver" : "1503677",
- "cnum": "86"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=cnum为空, expected=SUCCESS, description=null, Method=null, body={
- "platform" : "WEB",
-"businessType" : "REGISTER",  
 "receiver" : "15036770523",
  "cnum": ""
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
+}}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=cnum不匹配, expected=SUCCESS, description=null, Method=null, body={
- "platform" : "WEB",
-"businessType" : "REGISTER",  
-"receiver" : "15036770523",
- "cnum": "33"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
-        <test-method signature="testSend(java.util.Map)[pri:0, instance:APItest.test_DemoApi@1530c739]" started-at="2020-05-12T15:17:21 CST" name="testSend" data-provider="SendSmsProvider" finished-at="2020-05-12T15:17:21 CST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{host_port=null, level=null, subname=cnum不存在, expected=SYSTEM_ERROR, description=null, Method=null, body={
- "platform" : "WEB",
-"businessType" : "REGISTER",  
-"receiver" : "15036770523",
- "cnum": "111"
-}, depency=null, url=null, header=null, ID=null, businessType=null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSend -->
+        </test-method> <!-- testLogin -->
       </class> <!-- APItest.test_DemoApi -->
-    </test> <!-- 这些是测试模块 -->
+    </test> <!-- Default test -->
   </suite> <!-- 我自己的接口测试套件 -->
 </testng-results>

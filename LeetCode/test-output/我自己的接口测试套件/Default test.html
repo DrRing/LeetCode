@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 12 15:05:19 CST 2020</td>
+<td>Started on:</td><td>Wed May 13 16:56:48 CST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1405 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1188 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,10 +75,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='APItest.test_CheckSmsApi.testSendSms()'><b>testSendSms</b><br>Test class: APItest.test_CheckSmsApi</td>
+<td title='APItest.test_DemoApi.testLogin()'><b>testLogin</b><br>Test class: APItest.test_DemoApi<br>Parameters: {subname=PHONE_PWD , expected=CNUM_PHONE_NOT_EXIST, description=null, ID=1.0, businessType=null, body={ 
+ "platform" : "WEB",
+"phone" : "13813813823", 
+ "cnum" : "86", 
+"password":"123456111",
+"timeout" : "", 
+"businessType" : "PHONE_PWD" 
+}, depency=null}</td>
 <td></td>
-<td>1</td>
-<td>APItest.test_CheckSmsApi@78e4deb0</td></tr>
+<td>0</td>
+<td>APItest.test_DemoApi@2eae8e6e</td></tr>
+<tr>
+<td title='APItest.test_DemoApi.testLogin()'><b>testLogin</b><br>Test class: APItest.test_DemoApi<br>Parameters: {subname=手机号验证码登录成功, expected=SUCCESS, description=null, ID=5.0, businessType=PHONE_CODE, body={
+ "platform" : "WEB",
+"phone" : "15036770523", 
+ "cnum" : "", 
+"captcha" : "3939", 
+"captchaType" : "LOGIN",
+"businessType" : "PHONE_CODE" 
+}, depency={
+ "platform" : "WEB",
+"businessType" : "LOGIN",  
+"receiver" : "15036770523",
+ "cnum": ""
+}}</td>
+<td></td>
+<td>0</td>
+<td>APItest.test_DemoApi@2eae8e6e</td></tr>
 </table><p>
 </body>
 </html>

@@ -2,13 +2,16 @@ package APItest;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -23,44 +26,35 @@ public class test_SendsmsApi {
 	public void before() {
 		System.out.println("测试开始");
 	}
-
-	@Test
-	public void testSend() {
+	@DataProvider
+	private Iterator<Object[]> SendSmsProvider() throws IOException {
+		List<Object[]> result = new ArrayList<Object[]>();
 		String sheetname = "Case_sendsms";
 		String pathString = "C:\\Users\\Administrator\\Desktop\\0312.xlsx";
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
-		// List<Map<String, Object>> cases_list= operateExcel.excel_re_map(pathString,
-		// sheetname);
-		List<Map<String, Object>> cases_list = operateExcel.excel_re_map2(pathString);
-		for (int i = 0; i < cases_list.size(); i++) {
-			Map<String, Object> ob = cases_list.get(i);
-			if (ob.get("body") != null && ob.get("expected") != null) {
-				Map<String, String> mapQ = JSONObject.parseObject(ob.get("body").toString(), Map.class);
-				String param = JSON.toJSONString(mapQ);
-				String resopseString = OkHttpUtil.postJson(url, param);
-				JSONObject jsonObject = JSONObject.parseObject(resopseString);
-				String codeString = jsonObject.getString("code");
-				String expected = ob.get("expected").toString();
-				if (expected.equals(codeString)) {
-					// System.out.println(ob.get("subname")+":"+"用例执行通过");
-					continue;
-				} else {
-					System.out.println(ob.get("subname") + ":" + "用例执行失败");
-				}
-			} else {
-				System.out.println("body为空");
-			}
+		List<Map<String, Object>> cases_list = operateExcel.excel_re_map(pathString, sheetname);
+		Iterator it = cases_list.iterator();
+		while (it.hasNext()) {
+			result.add(new Object[] { it.next() });
 		}
-//		Assertion.Assertion.verifyEquals(codeString, expected,"预期是:"+"codeString"+"实际是："+expected);
-//		SoftAssert assertion = new SoftAssert();
-//		System.out.println(expected+":"+codeString);
-//		assertion.assertEquals(codeString, expected);
-//		assertion.assertAll();
+		return result.iterator();
 	}
 
-	public void after() {
-		System.out.println("测试结束");
+	@Test(dataProvider = "SendSmsProvider")
+	public void testSend(Map<String, Object> casedemo) {
+		//System.out.println("11111111111");
 
+		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
+		if (casedemo.get("body") != null && casedemo.get("expected") != null) {
+			Map<String, String> mapQ = JSONObject.parseObject(casedemo.get("body").toString(), Map.class);
+			String param = JSON.toJSONString(mapQ);
+			String resopseString = OkHttpUtil.postJson(url, param);
+			JSONObject jsonObject = JSONObject.parseObject(resopseString);
+			String codeString = jsonObject.getString("code");
+			String expected = casedemo.get("expected").toString();
+			Assert.assertEquals(codeString, expected);
+		}
 	}
+	
+	
 
 }

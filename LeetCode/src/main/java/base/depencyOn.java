@@ -61,7 +61,7 @@ public class depencyOn {
 			String captchaCode = data.getString("captchaCode");
 			return captchaCode;
 		} catch (Exception e) {
-			System.out.print(e);
+			//System.out.print(e);
 			return null;
 		}
 	}
