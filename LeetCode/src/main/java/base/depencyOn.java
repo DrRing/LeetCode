@@ -18,9 +18,10 @@ public class depencyOn {
 		}
 	}
 
-	@Test
-	public String getLoginId(String json) {
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login");
+//获取loginId
+
+	public static String getLoginId(String json) {
+		String url = getProperty.getDepencyProperty("host") + getProperty.getDepencyProperty("login_url");
 		String responseString = OkHttpUtil.postJson(url, json);
 		JSONObject jsonObject = JSONObject.parseObject(responseString);
 		String dataObject = jsonObject.getString("data");
@@ -34,8 +35,9 @@ public class depencyOn {
 		}
 	}
 
+//执行登录操作
 	public static void doLogin(String json) {
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login");
+		String url = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("login");
 		String responseString = OkHttpUtil.postJson(url, json);
 		JSONObject jsonObject = JSONObject.parseObject(responseString);
 		String dataObject = jsonObject.getString("data");
@@ -50,8 +52,9 @@ public class depencyOn {
 		}
 	}
 
+//获取验证码
 	public static String getSendSms(String json) {
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
+		String url = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("captcha_url");
 		String responseString = OkHttpUtil.postJson(url, json);
 		JSONObject jsonObject = JSONObject.parseObject(responseString);
 		String dataObject = jsonObject.getString("data");
@@ -61,7 +64,7 @@ public class depencyOn {
 			String captchaCode = data.getString("captchaCode");
 			return captchaCode;
 		} catch (Exception e) {
-			//System.out.print(e);
+			// System.out.print(e);
 			return null;
 		}
 	}

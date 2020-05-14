@@ -34,7 +34,7 @@ public class test_DemoApi {
 
 	@Test(dataProvider = "LoginProvider")
 	public void testLogin(Map<String, Object> casedemo) {
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login_url");
+		String url = getProperty.getDepencyProperty("host") + getProperty.getDepencyProperty("login_url");
 		// if (casedemo.get("depency") != null) {
 		try {
 			String para_captchString = casedemo.get("depency").toString();

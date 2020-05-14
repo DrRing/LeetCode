@@ -1,7 +1,6 @@
 package runner;
 
 import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,22 +18,20 @@ import dto.*;
 public class run {
 
 	public static void main(String[] args) {
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
-		String path = "C:\\Users\\Administrator\\Desktop\\1.xlsx";
-		String sheetname = null;
-		List<Map<String, Object>> cases_list = operateExcel.excel_re_map2(path);
-		for (int i = 0; i < cases_list.size(); i++) {
-			Map<String, Object> ob = cases_list.get(i);
-			if (ob.get("body") != null) {
-				Map<String, String> mapQ = JSONObject.parseObject(ob.get("body").toString(), Map.class);
-				String param = JSON.toJSONString(mapQ);
-				String respString2 = OkHttpUtil.postJson(url, param);
-				JSONObject jsonObject = JSONObject.parseObject(respString2);
-				String respose_code = jsonObject.getString("code");
-				System.out.println(respose_code);
-
-			}
-
+		String path = "property/Resource.json";
+		String json = util.getJson.getJson(path);
+		String url = getProperty.getDepencyProperty("host") + getProperty.getDepencyProperty("login_url");
+		String responseString = OkHttpUtil.postJson(url, json);
+		JSONObject jsonObject = JSONObject.parseObject(responseString);
+		String dataObject = jsonObject.getString("data");
+		System.out.println(responseString);
+		JSONObject data = JSONObject.parseObject(dataObject);
+		try {
+			String captchaCode = data.getString("loginId");
+			System.out.print(captchaCode);
+		} catch (Exception e) {
+			System.out.print(e);
 		}
 	}
+
 }

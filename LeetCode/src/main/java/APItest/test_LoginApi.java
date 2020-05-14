@@ -27,7 +27,7 @@ public class test_LoginApi {
 		String sheetname = "Case_login";
 		String pathString = "C:\\Users\\Administrator\\Desktop\\0312.xlsx";
 		List<Map<String, Object>> cases_list = operateExcel.excel_re_map(pathString, sheetname);
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login_url");
+		String url = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("login_url");
 
 		for (int i = 0; i < cases_list.size(); i++) {
 			Map<String, Object> ob = cases_list.get(i);

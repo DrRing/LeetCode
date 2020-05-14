@@ -54,8 +54,8 @@ public class getJson {
 //		JSONObject jsonObject = JSONObject.parseObject(responseString); 
 //		String dataObject = jsonObject.getString("data");	
 //		JSONObject data = JSONObject.parseObject(dataObject); 
-		String captchaCode = depencyOn.getSendSms(bodyString);
-		System.out.println(captchaCode);
+		//String captchaCode = depencyOn.getSendSms(bodyString);
+		System.out.println(bodyString);
 
 	}
 

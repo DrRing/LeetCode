@@ -43,7 +43,7 @@ public class test_SendsmsApi {
 	public void testSend(Map<String, Object> casedemo) {
 		//System.out.println("11111111111");
 
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
+		String url = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("captcha_url");
 		if (casedemo.get("body") != null && casedemo.get("expected") != null) {
 			Map<String, String> mapQ = JSONObject.parseObject(casedemo.get("body").toString(), Map.class);
 			String param = JSON.toJSONString(mapQ);

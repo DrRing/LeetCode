@@ -19,7 +19,7 @@ public class DataProvider_Source {
 		List<Object[]> result = new ArrayList<Object[]>();
 		String sheetname = "test";
 		String pathString = "C:\\Users\\Administrator\\Desktop\\0312.xlsx";
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login_url");
+		String url = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("login_url");
 		List<Map<String, Object>> cases_list = operateExcel.excel_re_map(pathString, sheetname);
 		Iterator it = cases_list.iterator();
 		while (it.hasNext()) {
@@ -44,7 +44,7 @@ public class DataProvider_Source {
 		List<Object[]> result = new ArrayList<Object[]>();
 		String sheetname = "Case_sendsms";
 		String pathString = "C:\\Users\\Administrator\\Desktop\\0312.xlsx";
-		String url = getProperty.getProperty("testhost") + getProperty.getProperty("login_url");
+		String url = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("login_url");
 		List<Map<String, Object>> cases_list = operateExcel.excel_re_map(pathString, sheetname);
 		// System.out.println(cases_list);
 

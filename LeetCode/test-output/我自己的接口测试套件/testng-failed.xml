@@ -6,13 +6,11 @@
   </listeners>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APItest.test_LoginApi">
+      <class name="APItest.test_CheckSmsApi">
         <methods>
           <include name="testLogin"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- APItest.test_LoginApi -->
+      </class> <!-- APItest.test_CheckSmsApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [我自己的接口测试套件] -->

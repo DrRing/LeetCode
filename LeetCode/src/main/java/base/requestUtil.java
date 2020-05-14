@@ -20,14 +20,14 @@ public class requestUtil {
 
 	public static String getcaptchaCode(Map<String, String> map) {
 
-		String uString = getProperty.getProperty("testhost") + getProperty.getProperty("captcha_url");
+		String uString = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("captcha_url");
 		requestUtil.re_postMethod(uString, map);
 
 		return null;
 	}
 
 	public static void login(Map<String, String> map) {
-		String uString = getProperty.getProperty("testhost") + getProperty.getProperty("login_url");
+		String uString = getProperty.getDepencyProperty("testhost") + getProperty.getDepencyProperty("login_url");
 		requestUtil.postMethod(uString, map);
 
 	}
